@@ -1,11 +1,14 @@
 #include <stdio.h>
+#include <string.h>
+
 /*
 *main function print a string
 *always return 0
 */
 
 int main(void)
-{
-puts("Programming is like building a multillingual puzzle", stdout);
+{  
+char s[] = "Programming is like building a multillingual puzzle"; 
+puts(s);
 return (0);
 }
