@@ -19,6 +19,8 @@ for (t = 48; t <= 57; t++)
 {
 for (y = 48; y <= 57; y++)
 {
+if ((num<t) || (m<y))
+{
 putchar(num);
 putchar(m);
 putchar(32);
@@ -32,6 +34,7 @@ else
 {
 putchar(44);
 putchar(32);
+}
 }
 }
 }
