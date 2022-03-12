@@ -19,14 +19,14 @@ for (t = 48; t <= 57; t++)
 {
 for (y = 48; y <= 57; y++)
 {
-if ((num < t) || (m < y))
+if ((num < t) || (num == t && m < y))
 {
 putchar(num);
 putchar(m);
 putchar(32);
 putchar(t);
 putchar(y);
-if (num == 57 && m == 57 && t == 57 && y == 57)
+if (num == 57 && m == 56 && t == 57 && y == 57)
 {
 break;
 }
