@@ -19,7 +19,7 @@ for (t = 48; t <= 57; t++)
 {
 for (y = 48; y <= 57; y++)
 {
-if ((num<t) || (m<y))
+if ((num < t) || (m < y))
 {
 putchar(num);
 putchar(m);
