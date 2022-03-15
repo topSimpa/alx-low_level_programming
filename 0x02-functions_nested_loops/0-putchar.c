@@ -18,5 +18,5 @@ putchar(97);
 putchar(114);
 putchar(10);
 
-return (10);
+return (0);
 }
