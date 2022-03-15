@@ -8,14 +8,13 @@
 
 int main(void)
 {
-putchar(95);
-putchar(112);
-putchar(117);
-putchar(116);
-putchar(99);
-putchar(104);
-putchar(97);
-putchar(114);
+char s[8] = "_putchar";
+int n = 0;
+while (n < 8)
+{
+putchar(s[n]);
+n++;
+}
 putchar(10);
 
 return (0);
