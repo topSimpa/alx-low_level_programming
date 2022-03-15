@@ -9,10 +9,11 @@
 
 void print_alphabet_x10(void)
 {
-int r = 0;
-int n = 97;
+
+int r = 0
 while (r < 10)
 {
+int n = 97;
 while (n < 123)
 {
 _putchar(n);
