@@ -15,14 +15,14 @@ while (r < 24)
 {
 int e = 0;
 
-_putchar(r / 10);
-_putchar(r % 10);
+_putchar(r / 10 + '0');
+_putchar(r % 10 + '0');
 _putchar (':');
 
 while (e < 60)
 {
-_putchar (e / 10);
-_putchar (e % 10);
+_putchar (e / 10 + '0');
+_putchar (e % 10 + '0');
 e++;
 }
 putchar(10);
