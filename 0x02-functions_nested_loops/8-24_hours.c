@@ -15,7 +15,7 @@ while (r < 24)
 {
 _putchar(r / 10);
 _putchar(r % 10);
-_putchar (':')
+_putchar (':');
 
 int e = 0;
 
