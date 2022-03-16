@@ -23,9 +23,9 @@ while (e < 60)
 {
 _putchar (e / 10 + '0');
 _putchar (e % 10 + '0');
+_putchar(10);
 e++;
 }
-putchar(10);
 r++;
 }
 }
