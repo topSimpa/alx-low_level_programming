@@ -20,6 +20,7 @@ else if (n > 0)
 {
 return (1);
 putchar(43);
+}
 else
 {
 return (-1);
