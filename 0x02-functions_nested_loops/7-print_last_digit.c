@@ -14,7 +14,7 @@ int r = n % 10;
 if (n  == 0)
 {
 _putchar(48);
-return(0)
+return(0);
 }
 else if (n > 0)
 {
@@ -25,6 +25,6 @@ else
 {
 r = -1 * r;
 _putchar(r + 48);
-return (r)
+return (r);
 }
 }
