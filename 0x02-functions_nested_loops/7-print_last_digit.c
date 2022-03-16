@@ -19,13 +19,13 @@ return (0);
 else if (n > 0)
 {
 int r = n % 10;
-_putchar(r + '0');
+_putchar(r + 48);
 return (r);
 }
 else
 {
 int r = (-1 * n) % 10;
-_putchar(r + '0');
+_putchar(r + 48);
 return (r);
 }
 }
