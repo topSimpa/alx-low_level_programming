@@ -29,7 +29,7 @@ else
 {
 _putchar((e * r) + '0');
 _putchar(',');
-_putchar(' ');
+_putchar('  ');
 }
 e++;
 }
