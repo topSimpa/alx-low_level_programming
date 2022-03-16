@@ -22,19 +22,21 @@ if (e * r >= 10)
 {
 _putchar((e * r) / 10 + '0');
 _putchar((e * r) % 10 + '0');
-if (e == 9)
+if (e < 9)
 {
-continue;
-}
 _putchar(',');
 _putchar(' ');
+}
 }
 else
 {
 _putchar((e * r) + '0');
+if (e < 9)
+{
 _putchar(',');
 _putchar(' ');
 _putchar(' ');
+}
 }
 e++;
 }
