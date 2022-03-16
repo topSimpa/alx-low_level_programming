@@ -26,5 +26,5 @@ else
 putchar(45);
 return (-1);
 }
-putchar(10)
+putchar(10);
 }
