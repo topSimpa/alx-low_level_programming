@@ -18,7 +18,7 @@ int e = 0;
 
 while (e < 10)
 {
-if (e * r > 10)
+if (e * r >= 10)
 {
 _putchar((e * r) / 10 + '0');
 _putchar((e * r) % 10 + '0');
