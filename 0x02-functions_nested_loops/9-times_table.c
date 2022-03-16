@@ -22,6 +22,10 @@ if (e * r >= 10)
 {
 _putchar((e * r) / 10 + '0');
 _putchar((e * r) % 10 + '0');
+if (e == 9)
+{
+continue;
+}
 _putchar(',');
 _putchar(' ');
 }
