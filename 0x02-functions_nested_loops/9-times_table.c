@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-* times_table - Used to Print lower case alphabet 10 times
+* times_table - Used to Print 9-times table
 * Return: Void (Sucess)
 */
 
