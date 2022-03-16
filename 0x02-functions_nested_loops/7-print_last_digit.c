@@ -3,29 +3,28 @@
 
 /**
 * print_last_digit - To check  sign of number
-* @n: n is the character to  print last digit
+* @n: n is the character to get last digit
 *Return: int (Sucess)
 */
 
 
 int print_last_digit(int n)
 {
-return(n);
+int r = n % 10;
 if (n  == 0)
 {
-_putchar('0');
-return (0);
+_putchar(48);
+return(0)
 }
 else if (n > 0)
 {
-int r = n % 10;
-_putchar(r + 48);
+_putchar(48 + r)
 return (r);
 }
 else
 {
-int r = (-1 * n) % 10;
+r = -1 * r;
 _putchar(r + 48);
-return (r);
+return (r)
 }
 }
