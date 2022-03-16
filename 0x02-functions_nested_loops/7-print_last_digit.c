@@ -18,7 +18,7 @@ return(0);
 }
 else if (n > 0)
 {
-_putchar(48 + r)
+_putchar(48 + r);
 return (r);
 }
 else
