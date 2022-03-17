@@ -16,6 +16,11 @@ if (n > 98)
 while (n > 97)
 {
 write_num(n);
+if (n != 98)
+{
+_putchar(',');
+_putchar(' ');
+}
 n--;
 }
 }
@@ -24,6 +29,11 @@ else
 while (n < 99)
 {
 write_num(n);
+if (n != 98)
+{
+_putchar(',');
+_putchar(' ');
+}
 n++;
 }
 }
@@ -42,15 +52,9 @@ if (i > 9)
 {
 _putchar(i / 10 + '0');
 _putchar(i % 10 + '0');
-if (i == 98)
-{
-break;
-}
 }
 else
 {
 _putchar(i + '0');
-_putchar(',');
-_putchar(' ');
 }
 }
