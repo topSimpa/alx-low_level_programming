@@ -15,20 +15,20 @@ num = 0;
 
 if (n == 0)
 {
-putchar(10);
+_putchar(10);
 }
 else
 {
 while (num < n)
 {
-putchar(92);
-putchar(10);
+_putchar(92);
+_putchar(10);
 if (num > 0)
 {
 int i;
 while (i < num)
 {
-putchar(' ');
+_putchar(' ');
 i++;
 }
 }
