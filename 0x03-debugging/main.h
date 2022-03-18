@@ -13,3 +13,4 @@ void print_to_98(int n);
 void write_num(int i);
 int largest_number(int a, int b, int c);
 void print_remaining_days(int month, int day, int year);
+int convert_day(int month, int day);
