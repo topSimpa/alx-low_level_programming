@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
-*print_numbers - To print out 0-9
-*Print out the numbers in decimal
-*Return: Always 0 (Success)
+/**
+* print_numbers - To print out 0-9
+* Print out the numbers in decimal
+* Return: void (Success)
 */
 
 void print_numbers(void)
