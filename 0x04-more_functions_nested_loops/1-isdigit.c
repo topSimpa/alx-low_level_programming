@@ -2,13 +2,13 @@
 #include "main.h"
 
 /**
-* _isupper - To check if lower case
-* @c: c is the character to check for case
+* _isdigit - To check if digit
+* @c: c is the character to check for value
 * Return: int (Sucess)
 */
 
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 
 if (c > 47 && c < 58)
