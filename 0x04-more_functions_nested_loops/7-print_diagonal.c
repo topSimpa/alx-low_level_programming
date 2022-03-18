@@ -23,9 +23,9 @@ while (num < n)
 {
 _putchar(92);
 _putchar(10);
-if (num > 0)
+if ((n > 1) && (num != n - 1))
 {
-int i;
+int i = -1;
 while (i < num)
 {
 _putchar(' ');
