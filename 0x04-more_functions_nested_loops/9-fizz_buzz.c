@@ -8,8 +8,9 @@
 
 int main(void)
 {
+int num;
 
-for (int num = 1; num < 101; num++)
+for (num = 1; num < 101; num++)
 {
 if (num % 3 == 0 && num % 5 == 0)
 {
