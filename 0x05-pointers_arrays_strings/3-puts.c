@@ -19,5 +19,6 @@ break;
 _putchar(s[i]);
 i++;
 }
+_putchar('\n')
 }
 
