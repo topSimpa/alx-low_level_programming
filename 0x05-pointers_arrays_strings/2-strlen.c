@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -11,7 +12,7 @@ int _strlen(char *s)
 int i=0;
 while(1)
 {
-if (*(s+1) == '\0')
+if (s[i] == '\0')
 {
 break;
 }
@@ -19,12 +20,4 @@ i++;
 }
 return (i);
 }
-
-int main (void)
-{
-int *c = "School";
-int p = _strlen(&c);
-printf("%d", p);
-return (0);
-{
 
