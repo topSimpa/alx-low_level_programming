@@ -16,8 +16,11 @@ if (s[i] == '\0')
 {
 break;
 }
+if (i %  2 == 0)
+{
 _putchar(s[i]);
-i= i + 2;
+i++;
+}
 }
 _putchar('\n');
 }
