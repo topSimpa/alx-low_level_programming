@@ -9,7 +9,15 @@
 
 int _strlen(char *s)
 {
-char a = *s;
-int r = sizeof(a);
-return (r);
+int i=0;
+while(1)
+{
+if (*(*s+1) == '/0')
+{
+break;
 }
+i++;
+}
+return (i);
+}
+
