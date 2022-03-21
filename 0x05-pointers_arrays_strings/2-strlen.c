@@ -9,6 +9,6 @@
 
 int _strlen(char *s)
 {
-int r = sizeof(*s[]);
+int r = sizeof(s);
 return (r);
 }
