@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -20,4 +19,12 @@ i++;
 }
 return (i);
 }
+
+int main (void)
+{
+int *c = "School";
+int p = _strlen(&c);
+printf("%d", p);
+return (0);
+{
 
