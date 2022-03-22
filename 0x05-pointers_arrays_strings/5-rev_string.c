@@ -2,27 +2,6 @@
 #include <stdio.h>
 
 /**
-* rev_string - return a string in reverse
-* @s: s is the string pointer (string)
-* Return: void (success)
-*/
-
-void rev_string(char *s)
-{
-int j = 0;
-int i = _strlen(s) - 1;
-char *c = s;
-
-while (i >= 0)
-{
-c[j] = s[i];
-j++;
-i--;
-}
-s = c;
-}
-
-/**
 * _strlen - return the length of a string
 * @s: s is the pointer to an array of char (string)
 * Return: int return length of string (success)
@@ -42,3 +21,23 @@ i++;
 return (i);
 }
 
+/**
+* rev_string - return a string in reverse
+* @s: s is the string pointer (string)
+* Return: void (success)
+*/
+
+void rev_string(char *s)
+{
+int l = _strlen(s);
+int j = l - 1;
+int h = l / 2;
+int i = 0;
+while (i < h)
+{
+char r = s[i];
+s[i] = s[j - i];
+s[j - i] = r;
+i++;
+}
+}
