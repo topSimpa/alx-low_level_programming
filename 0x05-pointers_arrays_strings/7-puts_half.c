@@ -26,6 +26,7 @@ int r = len + 1 / 2;
 while (r < r + (r - 1))
 {
 _putchar(s[r]);
+r++;
 }
 }
 _putchar('\n');
