@@ -20,6 +20,6 @@ printf(", ");
 }
 i++;
 }
-_putchar('\n');
+printf("\n");
 }
 
