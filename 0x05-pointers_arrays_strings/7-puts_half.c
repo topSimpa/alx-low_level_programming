@@ -22,10 +22,10 @@ r++;
 }
 else
 {
-int r = len + 1 / 2;
-while (r < r + (r - 1))
+int e = len + 1 / 2;
+while (e < e + (e - 1))
 {
-_putchar(s[r]);
+_putchar(s[e]);
 r++;
 }
 }
