@@ -1,3 +1,4 @@
+
 #include "main.h"
 #include <stdio.h>
 
@@ -44,12 +45,12 @@ e++;
 }
 else
 {
-int r = len + 1 / 2;
-int e = r;
-while (e < r + (r - 1))
+int o = (len + 1) / 2;
+int w = o;
+while (w < o + (o - 1))
 {
-_putchar(s[e]);
-e++;
+_putchar(s[w]);
+w++;
 }
 }
 _putchar('\n');
