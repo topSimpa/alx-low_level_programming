@@ -23,9 +23,9 @@ return (i);
 
 /**
 * _strcat - copies one string to another
-* @dest: destination of copy
-* @src: variable to copy
-* Return: char (Success)
+*@dest: destination of copy
+*@src: variable to copy
+*Return: char (Success)
 */
 
 char *_strcat(char *dest, char *src)
