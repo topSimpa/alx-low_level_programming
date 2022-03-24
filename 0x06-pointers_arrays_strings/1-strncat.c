@@ -37,7 +37,7 @@ int j = 0;
 
 while (i <= len)
 {
-if (i == len)
+if (i == len || src[j] == '\0')
 {
 dest[i] = '\0';
 break;
