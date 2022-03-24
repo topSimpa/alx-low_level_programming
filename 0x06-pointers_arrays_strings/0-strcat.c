@@ -31,19 +31,14 @@ return (i);
 
 char *_strcat(char *dest, char *src)
 {
-int len = _strlen(src) + 1 + _strlen(dest);
-int i = 0;
-while (i < len)
+int len = _strlen(src) + _strlen(dest);
+int i = _strlen(src);
+int j = 0;
+while (i <= len)
 {
-if (i == _strlen(dest))
-{
-dest[i] = src[i];
-}
-else if (i == len - 1)
-{
-dest[i] = '\0';
-}
+dest[i] = src[j];
 i++;
+j++;
 }
 return (dest);
 }
