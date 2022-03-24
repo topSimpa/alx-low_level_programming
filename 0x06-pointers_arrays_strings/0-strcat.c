@@ -32,7 +32,7 @@ return (i);
 char *_strcat(char *dest, char *src)
 {
 int len = _strlen(src) + _strlen(dest);
-int i = _strlen(src);
+int i = _strlen(dest);
 int j = 0;
 while (i <= len)
 {
