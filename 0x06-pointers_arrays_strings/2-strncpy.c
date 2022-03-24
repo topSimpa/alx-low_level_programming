@@ -33,13 +33,14 @@ return (i);
 char *_strncpy(char *dest, char *src, int n)
 {
 int len = n;
+int ls = _strlen(src);
 int i = 0;
 while (i < len)
 {
 dest[i] = src[i];
-if (src[i] == '\0')
+if (i > ls)
 {
-break;
+dest[i] = '\0';
 }
 i++;
 }
