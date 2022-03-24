@@ -31,19 +31,20 @@ return (i);
 
 char *_strncat(char *dest, char *src, int n)
 {
-int len = _strlen(src) + 1 + n;
-int i = 0;
-while (i < len)
+int len = _strlen(dest) + n;
+int i = _strlen(dest);
+int j = 0;
+
+while (i <= len)
 {
-if (i == _strlen(dest))
-{
-dest[i] = src[i];
-}
-else if (i == len - 1)
+if (i == len)
 {
 dest[i] = '\0';
+break;
 }
+dest[i] = src[j];
 i++;
+j++;
 }
 return (dest);
 }
