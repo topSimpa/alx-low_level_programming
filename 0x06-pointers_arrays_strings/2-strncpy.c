@@ -36,12 +36,11 @@ int len = n;
 int i = 0;
 while (i <= len)
 {
-if (i == len)
+dest[i] = src[i];
+if (src[i] == '\0')
 {
-dest[i] = '\0';
 break;
 }
-dest[i] = src[i];
 i++;
 }
 return (dest);
