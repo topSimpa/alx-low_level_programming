@@ -9,27 +9,19 @@
 char *leet(char *s)
 {
 int i = 0;
-while (s[i] != 0)
+int dif[5] = {0, 4, 14, 19, 11};
+char val[5] = {'4', '3', '0', '7', '1'};
+while (s[i] != '\0')
 {
-if (s[i] == 65 || s[i] == 97)
+int j = 0;
+while (j < 5)
 {
-s[i] = '4';
+if ((s[i] == 65 + dif[j]) || (s[i] == 97 + dif[j]))
+{
+s[i] = val[j];
+break;
 }
-else if (s[i] == 69 || s[i] == 101)
-{
-s[i] = '3';
-}
-else if (s[i] == 79 || s[i] == 111)
-{
-s[i] = '0';
-}
-else if (s[i] == 84 || s[i] == 116)
-{
-s[i] = '7';
-}
-else if (s[i] == 76 || s[i] == 108)
-{
-s[i] = '1';
+j++;
 }
 i++;
 }
