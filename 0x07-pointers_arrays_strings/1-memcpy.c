@@ -5,6 +5,7 @@
 *@dest: the destination string
 *@src: the source string
 *@n: the number of bit to copy
+*Return: return dest string pointer
 */
 
 
