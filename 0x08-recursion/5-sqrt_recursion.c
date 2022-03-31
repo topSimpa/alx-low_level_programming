@@ -13,19 +13,19 @@ int _subtrahend(int n, int i)
 if (n > 0)
 {
 i++;
-n = n - ((2 * (i)) - 1);
+n = n - ((2 * (i)) -1);
 return (1 + _subtrahend(n, i));
 }
 else
 {
-return(0);
+return (0);
 }
 }
 
 /**
-* _strlen_recursion - returns the length of a string
-* @s: pointer to the string
-* Return: int is return (sucess)
+* _sqrt_recursion - returns the natural square root of a number
+* @n: the interger to get its square root
+* Return: natural square root or negative interger (sucess)
 */
 
 
