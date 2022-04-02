@@ -48,11 +48,16 @@ _putchar(10);
 
 void write_num(int i)
 {
-if (i > 9)
+if (i > 9 && i < 100)
 {
 _putchar(i / 10 + '0');
 _putchar(i % 10 + '0');
 }
+else if (i > 99)
+{
+_putchar(i / 100 + '0');
+_putchar((i / 10) % 10 + '0');
+_putchar(i % 10 + '0');
 else
 {
 _putchar(i + '0');
