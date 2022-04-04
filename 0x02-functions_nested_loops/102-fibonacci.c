@@ -6,7 +6,7 @@
 * Return: int  0 (sucess)
 */
 
-int main (void)
+int main(void)
 {
 long int f = 1;
 long int s = 1;
@@ -21,6 +21,7 @@ while (i < 50)
 	else
 	{
 		long int n = s + f;
+
 		printf("%ld", n);
 		f = s;
 		s = n;
