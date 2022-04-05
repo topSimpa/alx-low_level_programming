@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,7 +22,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (argv[i][0] < 48 || argv[i][0] > 57)
+			if (rn != argv[i])
 			{
 				printf("%s\n", "Error");
 				return (1);
