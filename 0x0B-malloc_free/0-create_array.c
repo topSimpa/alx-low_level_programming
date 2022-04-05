@@ -20,6 +20,7 @@ if (size == 0)
 while (i < size)
 {
 	arr[0] = c;
+	i++;
 }
 return (arr);
 }
