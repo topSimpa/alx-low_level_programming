@@ -17,10 +17,13 @@ if (size == 0)
 {
 	return (NULL);
 }
-while (i < size)
+else if (arr != NULL)
 {
-	arr[i] = c;
-	i++;
+	while (i < size)
+	{
+		arr[i] = c;
+		i++;
+	}
 }
 return (arr);
 }
