@@ -18,7 +18,7 @@ if (str == NULL)
 }
 else if (arr != NULL)
 {
-	while (i < size)
+	while (str[i] != '\n')
 	{
 		arr[i] = str[i];
 		i++;
