@@ -8,7 +8,7 @@
 * Return: a pointer to the array
 */
 
-char *_strdup(char *str);
+char *_strdup(char *str)
 {
 char *arr = malloc(sizeof(*str));
 unsigned int i = 0;
