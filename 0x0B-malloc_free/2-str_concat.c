@@ -36,11 +36,11 @@ char *str_concat(char *s1, char *s2)
 {
 if (s1 == NULL)
 {
-	*s1 = "";
+	s1 = "";
 }
 if (s2 == NULL)
 {
-	*s2 = "";
+	s2 = "";
 }
 
 char *arr = malloc(count(s1) + 1 + count(s2));
@@ -58,6 +58,7 @@ int j = 0;
 	while (s2[j] != '\0')
 	{
 		arr[i + j] = s2[j];
+		j++;
 	}
 }
 return (arr);
