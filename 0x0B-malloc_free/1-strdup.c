@@ -36,7 +36,7 @@ if (str == NULL)
 }
 else if (arr != NULL)
 {
-	while (str[i] != '\n')
+	while (str[i] != '\0')
 	{
 		arr[i] = str[i];
 		i++;
