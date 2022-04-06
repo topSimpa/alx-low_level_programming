@@ -11,6 +11,11 @@ int count(char *c)
 {
 int i = 0;
 int n = 0;
+if (c == 0)
+{
+return (-1);
+}
+
 while (c[i] != 0)
 {
 	n++;
@@ -29,14 +34,16 @@ return (n);
 char *_strdup(char *str)
 {
 char *arr = malloc(count(str) + 1);
-int i = 0;
+
 if (str == NULL)
 {
 	return (NULL);
 }
 else if (arr != NULL)
 {
-	while (str[i] != 0)
+int i = 0;
+
+	while (str[i] != '\0')
 	{
 		arr[i] = str[i];
 		i++;
