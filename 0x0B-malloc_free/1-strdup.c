@@ -42,6 +42,5 @@ else if (arr != NULL)
 		i++;
 	}
 }
-free(arr);
 return (arr);
 }
