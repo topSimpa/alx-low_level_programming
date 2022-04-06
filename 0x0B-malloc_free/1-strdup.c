@@ -28,7 +28,7 @@ return (n);
 
 char *_strdup(char *str)
 {
-char *arr = malloc(sizeof(str));
+char *arr = malloc(count(str) + 1);
 int i = 0;
 if (str[0] == 0)
 {
