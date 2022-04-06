@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
 * count - count the string
-*@s: string to count
+*@c: string to count
 *Return: an int of count
 */
 
@@ -28,7 +28,7 @@ return (n);
 
 char *_strdup(char *str)
 {
-char *arr = malloc(count(str));
+char *arr = malloc(count(str) + 1);
 int i = 0;
 if (str == NULL)
 {
