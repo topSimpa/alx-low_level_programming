@@ -11,7 +11,7 @@ int count(char *c)
 {
 int i = 0;
 int n = 0;
-while (c[i] != 0)
+while (c[i] != '\0')
 {
 	n++;
 	i++;
