@@ -28,6 +28,6 @@ while (i < height)
 	}
 	i++;
 }
-return (arr);
+return (*arr);
 }
 
