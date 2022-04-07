@@ -43,7 +43,7 @@ if (arr != NULL)
 
 	while (s1[i] != '\0')
 	{
-		arr[i] = s2[i];
+		arr[i] = s1[i];
 		i++;
 	}
 	while (s2[j] != '\0')
