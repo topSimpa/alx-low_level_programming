@@ -15,17 +15,20 @@ int i = 0;
 int j = 0;
 int **arr = (int **)malloc(sizeof(int *) * height);
 
-while (s < height)
+if (arr != NULL)
 {
-	arr[s] = (int *)malloc(sizeof(int) * width);
-	s++;
+	while (s < height)
+	{
+		arr[s] = (int *)malloc(sizeof(int) * width);
+		s++;
+	}
 }
 if (width == 0 || height == 0)
 {
 	return (NULL);
 }
 
-else if (arr != NULL)
+else if (arr[i] != NULL)
 {
 	while (i < height)
 	{
