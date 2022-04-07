@@ -27,5 +27,6 @@ while (i < height)
 		arr[i][j] = 0;
 	}
 }
+return (arr);
 }
 
