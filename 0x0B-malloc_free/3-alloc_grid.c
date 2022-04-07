@@ -25,7 +25,9 @@ while (i < height)
 	while (j < width)
 	{
 		arr[i][j] = 0;
+		j++;
 	}
+	i++;
 }
 return (arr);
 }
