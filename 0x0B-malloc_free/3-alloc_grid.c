@@ -17,7 +17,7 @@ int **arr = malloc(sizeof(int) * height);
 
 while (s < height)
 {
-	int arr[i] = malloc(sizeof(int) * width);
+	arr[i] = malloc(sizeof(int) * width);
 	s++;
 }
 
