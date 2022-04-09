@@ -41,6 +41,10 @@ else if (arr != NULL)
 		i++;
 	}
 }
+else
+{
+free(arr);
+}
 return (arr);
 }
 
