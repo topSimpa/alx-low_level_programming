@@ -42,7 +42,7 @@ else if (arr != NULL)
 }
 else
 {
-return (0);
+return (NULL);
 }
 return (arr);
 }
