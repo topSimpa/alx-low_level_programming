@@ -40,6 +40,10 @@ else if (arr != NULL)
 		i++;
 	}
 }
+else
+{
+return (0);
+}
 return (arr);
 }
 
