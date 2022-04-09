@@ -20,10 +20,6 @@ if (arr != NULL)
 	while (s < height)
 	{
 		arr[s] = malloc(sizeof(int *) * width);
-		if (arr[s] == NULL)
-		{
-			return (NULL);
-		}
 		s++;
 	}
 }
