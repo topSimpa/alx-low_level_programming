@@ -19,7 +19,7 @@ while (s < height)
 {
 	while (s < height)
 	{
-		arr[s] = (int *) malloc(sizeof(int) * width);
+		arr[s] = malloc(sizeof(int) * width);
 		s++;
 	}
 }
