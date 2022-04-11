@@ -10,6 +10,8 @@
 * Description: All the information could be declare with the struct
 */
 
+void init_dog(struct dog *d, char *name, float age, char *owner);
+
 struct dog
 {
 	char *name;
