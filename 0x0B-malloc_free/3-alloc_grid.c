@@ -43,7 +43,7 @@ else if (arr != NULL)
 }
 while (k < height)
 {
-	free(array[k]);
+	free(arr[k]);
 	k++;
 }
 return (arr);
