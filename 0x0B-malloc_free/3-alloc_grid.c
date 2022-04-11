@@ -41,11 +41,6 @@ else if (arr != NULL)
 		i++;
 	}
 }
-while (k < height)
-{
-	free(arr[k]);
-	k++;
-}
 return (arr);
 }
 
