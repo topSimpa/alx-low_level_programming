@@ -42,7 +42,7 @@ else if (arr != NULL)
 }
 else
 {
-while (s < heigth)
+while (s < height)
 {
 	free(arr[s]);
 }
