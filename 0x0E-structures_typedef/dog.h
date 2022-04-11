@@ -10,7 +10,6 @@
 * Description: All the information could be declare with the struct
 */
 
-void init_dog(struct dog *d, char *name, float age, char *owner);
 
 struct dog
 {
@@ -18,5 +17,7 @@ struct dog
 	float age;
 	char *owner;
 };
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif /* for _DOG_H_ */
