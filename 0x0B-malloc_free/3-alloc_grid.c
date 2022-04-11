@@ -17,7 +17,7 @@ int **arr = malloc(sizeof(int **) * height);
 
 if (width == 0 || height == 0)
 {
-	print("yes")
+	print("yes");
 	free(arr);
 	return (NULL);
 }
