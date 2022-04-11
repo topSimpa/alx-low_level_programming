@@ -47,6 +47,7 @@ while (s < heigth)
 	free(arr[s]);
 }
 free(arr);
+}
 return (arr);
 }
 
