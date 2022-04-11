@@ -1,5 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 
 /**
 *alloc_grid - create a 2 dimensional array where each element is 0
