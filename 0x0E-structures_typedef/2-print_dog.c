@@ -22,7 +22,7 @@ if (d)
 		printf("Name: %s\n", "(nil)");
 	}
 
-	if ((*d).age != 0)
+	if ((*d).age != 0 || age != NAN)
 	{
 		printf("Age: %f\n", (*d).age);
 	}
