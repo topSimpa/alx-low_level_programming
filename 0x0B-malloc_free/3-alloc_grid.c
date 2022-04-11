@@ -14,6 +14,7 @@ int s = 0;
 int i = 0;
 int j = 0;
 int **arr = malloc(sizeof(int **) * height);
+int *inarr = malloc(sizeof(int) * width);
 
 if (width == 0 || height == 0)
 {
@@ -23,11 +24,8 @@ else if (arr != NULL)
 {
 	while (s < height)
 	{
-		while (s < height)
-		{
-			arr[s] = malloc(sizeof(int) * width);
+			arr[s] = inarr;
 			s++;
-		}
 	}
 
 	while (i < height)
@@ -40,6 +38,8 @@ else if (arr != NULL)
 		i++;
 	}
 }
+free (inarr);
 return (arr);
 }
+
 
