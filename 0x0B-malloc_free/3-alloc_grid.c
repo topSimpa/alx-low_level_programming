@@ -42,10 +42,6 @@ else if (arr != NULL)
 }
 else
 {
-while (s < height)
-{
-	free(arr[s]);
-}
 free(arr);
 }
 return (arr);
