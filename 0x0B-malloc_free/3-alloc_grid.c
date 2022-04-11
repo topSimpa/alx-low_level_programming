@@ -19,7 +19,6 @@ int **arr = malloc(sizeof(int **) * height);
 
 if (width == 0 || height == 0)
 {
-	putchar('y');
 	free(arr);
 	return (NULL);
 }
@@ -41,6 +40,13 @@ else if (arr != NULL)
 		i++;
 	}
 }
+else
+{
+while (s < heigth)
+{
+	free(arr[s]);
+}
+free(arr);
 return (arr);
 }
 
