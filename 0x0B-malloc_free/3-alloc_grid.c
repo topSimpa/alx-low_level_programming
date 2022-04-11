@@ -28,7 +28,7 @@ else if (arr != NULL)
 {
 	while (s < height)
 	{
-			arr[s] = inarr;
+			arr[s] = malloc(sizeof(int) * width);
 			s++;
 	}
 
