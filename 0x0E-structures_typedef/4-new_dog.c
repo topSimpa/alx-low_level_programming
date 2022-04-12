@@ -23,7 +23,7 @@ if (d)
 {
 	return (d);
 }
-return (NULL);
+return (0);
 }
 
 
