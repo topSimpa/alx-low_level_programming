@@ -22,6 +22,7 @@ if (arr == NULL)
 	return (NULL);
 }
 
+
 else if (arr != NULL)
 {
 	while (s < height)
@@ -30,6 +31,7 @@ else if (arr != NULL)
 		if (arr[s] == NULL)
 		{
 			free(arr[s]);
+			free(arr);
 			return (NULL);
 		}
 		s++;
