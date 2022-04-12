@@ -19,18 +19,19 @@ int **arr = malloc(sizeof(int **) * height);
 if (arr == NULL)
 {
 	free(arr);
-}
-
-else if (width == 0 || height == 0)
-{
-	free(arr);
 	return (NULL);
 }
+
 else if (arr != NULL)
 {
 	while (s < height)
 	{
 		arr[s] = malloc(sizeof(int) * width);
+		if (arr[s] == NULL)
+		{
+			free(arr[s]);
+			return (NULL);
+		}
 		s++;
 	}
 
