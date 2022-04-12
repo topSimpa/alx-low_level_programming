@@ -19,11 +19,11 @@ r.age = age;
 r.owner = owner;
 d = &r;
 
-if (d && name && age && owner)
+if (r && name && age && owner)
 {
 	return (d);
 }
-/*return (NULL); */
+return (NULL);
 }
 
 
