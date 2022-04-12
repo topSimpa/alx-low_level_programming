@@ -19,7 +19,7 @@ r.age = age;
 r.owner = owner;
 d = &r;
 
-if (d && name && age && owner)
+if (d)
 {
 	return (d);
 }
