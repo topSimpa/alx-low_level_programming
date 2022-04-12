@@ -23,7 +23,7 @@ if (d && name && age && owner)
 {
 	return (d);
 }
-return (NULL);
+/*return (NULL); */
 }
 
 
