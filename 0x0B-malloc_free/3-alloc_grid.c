@@ -22,6 +22,11 @@ if (arr == NULL)
 	return (NULL);
 }
 
+else if (width <= 0 || height <= 0)
+{
+	free(arr);
+	return (NULL);
+}
 
 else if (arr != NULL)
 {
