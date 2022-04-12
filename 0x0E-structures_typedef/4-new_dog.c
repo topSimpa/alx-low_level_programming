@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <math.h>
 
 /**
 *new_dog - initializes the variable in struct
@@ -19,11 +20,11 @@ r.age = age;
 r.owner = owner;
 d = &r;
 
-if (d)
+if (d && name != NULL && (age != 0 || age != NAN) && owner != NULL)
 {
 	return (d);
 }
-return (0);
+return (NULL);
 }
 
 
