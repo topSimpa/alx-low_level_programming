@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int  i;
+	unsigned long int r;
 
 	if (argc == 1)
 	{
@@ -22,10 +23,13 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (rn != argv[i])
+			for (r = 0; r < strlen(argv[i]); r++)
 			{
-				printf("%s\n", "Error");
-				return (1);
+				if (argv[i][r] < 48 || argv[i][r] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 			sum += atoi(argv[i]);
 		}
@@ -33,3 +37,4 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+
