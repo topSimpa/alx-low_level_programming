@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 int (*f)(int, int);
 int r;
 
-if (argc != 4)
+if (argc != 4 || argv[3][0] == '\0' || argv[1][0] == '\0')
 {
 	printf("Error\n");
 	exit(98);
