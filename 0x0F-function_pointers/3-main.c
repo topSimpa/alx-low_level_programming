@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
 int (*f)(int, int);
 int r;
 
-if (argc != 4 || argv[3][0] == '\0' || argv[1][0] == '\0')
+if (argc != 4)
 {
 	printf("Error\n");
 	exit(98);
 }
 f = get_op_func(argv[2]);
-if (f == NULL)
+if (f == NULL || argv[1][0] == '\0' || argv[3][0] == '\0')
 {
 	printf("Error\n");
 	exit(99);
