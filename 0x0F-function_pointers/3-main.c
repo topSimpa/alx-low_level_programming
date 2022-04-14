@@ -16,7 +16,7 @@ int r;
 
 if (argc != 4)
 {
-	printf("yError\n");
+	printf("Error\n");
 	exit(98);
 }
 if (argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*' && argv[2][0] != '%' && argv[2][0] != '/')
