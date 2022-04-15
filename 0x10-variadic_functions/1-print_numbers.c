@@ -23,9 +23,20 @@ if (n)
 	va_start(op_arg, n);
 	while (i <= n)
 	{
-		if (separator != NULL)
+		if (separator )
 		{
-			printf("%d%s", va_arg(op_arg, int), separator);
+			if (i != n)
+			{
+				printf("%d%s", va_arg(op_arg, int), separator);
+			}
+			else
+			{
+				printf("%d", va_arg(op_arg, int));
+			}
+		}
+		else
+		{
+			printf("%d", va_arg(op_arg, int));
 		}
 		i++;
 	}
