@@ -23,7 +23,7 @@ int i = 0;
 
 while (i < 5)
 {
-	if (s[0] == *((ops[i]).op))
+	if (*s == *((ops[i]).op) && s[1] == '\0')
 	{
 		return ((ops[i]).f);
 	}
