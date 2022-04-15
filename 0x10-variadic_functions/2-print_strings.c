@@ -33,7 +33,7 @@ if (n)
 		}
 		else
 		{
-			printf("nil");
+			printf("(nil)");
 		}
 		i++;
 	}
