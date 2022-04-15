@@ -23,7 +23,7 @@ if (n)
 	va_start(op_arg, n);
 	while (i <= n)
 	{
-		if (separator[0] != '\0')
+		if (separator)
 		{
 			printf("%d%s", va_arg(op_arg, int), separator);
 		}
