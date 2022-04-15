@@ -1,0 +1,1 @@
+variadic function in c
