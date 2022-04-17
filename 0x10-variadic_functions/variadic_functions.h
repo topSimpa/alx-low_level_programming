@@ -2,8 +2,7 @@
 #define _VARIADIC_FUNCTIONS_H_
 #include <stdarg.h>
 #include <stddef.h>
-#undef NULL
-#define NULL "(nil)"
+
 
 void _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
@@ -21,7 +20,9 @@ typedef struct print_any
 {
 	char id;
 	void (*p)(va_list);
-}print;
+} print;
+
+#define null_char(e, r) ((NULL) == (e) ? "(nil)" : (r))
 
 void print_c(va_list chr);
 void print_c(va_list in);

@@ -27,6 +27,7 @@ printf("%c", c);
 void print_i(va_list in)
 {
 int c;
+
 c = va_arg(in, int);
 printf("%d", c);
 }
@@ -56,8 +57,10 @@ printf("%f", c);
 void print_s(va_list str)
 {
 char *c;
+char *s;
 
-c = va_arg(str, char *);
+s = va_arg(str, char *);
+c = null_char(s, s);
 printf("%s", c);
 }
 
@@ -83,27 +86,31 @@ print dict[] = {
 
 va_start(all, format);
 i = 0;
-
-while (format[i] != '\0' && format)
+if (format != NULL)
+{
+while (format[i] != '\0')
 {
 	j = 0;
 	while (j < 4)
 	{
-		if (format[i] == (dict[j]).id)
+		if (format[i] == (dict[j].id))
 		{
-			f = (dict[j]).p;
+			f = (dict[j].p);
 			f(all);
-			if (format[i + 1] != '\0')
+			switch (format[i + 1])
 			{
-				printf(", ");
+				case '\0':
+					break;
+				default:
+					printf(", ");
+					break;
 			}
-			break;
 		}
 		j++;
 	}
 	i++;
 }
-
+}
 putchar('\n');
 va_end(all);
 }
