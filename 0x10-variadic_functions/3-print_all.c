@@ -59,14 +59,7 @@ void print_s(va_list str)
 char *c;
 
 c = va_arg(str, char *);
-if (c == NULL)
-{
-	printf("(nil)");
-}
-else
-{
-	printf("%s", c);
-}
+printf("%s", c);
 }
 
 
