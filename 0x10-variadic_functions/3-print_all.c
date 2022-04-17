@@ -35,7 +35,7 @@ printf("%d", c);
 /**
 *print_f - print characters
 *
-*@n: number of element to print
+*@flt: number of element to print
 *Return: returns void
 */
 
@@ -66,7 +66,6 @@ printf("%s", c);
 /**
 * print_all - prints all types passed
 * @format: the format to print the argument pass
-* @separator: what to use to separate two printed strings
 * Return: void
 */
 
@@ -76,7 +75,12 @@ void print_all(const char * const format, ...)
 va_list all;
 int i, j;
 void (*f)(va_list);
-print dict[] = {{'c', print_c}, {'i', print_i}, {'f', print_f}, {'s', print_s}};
+print dict[] = {
+{'c', print_c},
+{'i', print_i},
+{'f', print_f},
+{'s', print_s}
+};
 
 va_start(all, format);
 i = 0;
