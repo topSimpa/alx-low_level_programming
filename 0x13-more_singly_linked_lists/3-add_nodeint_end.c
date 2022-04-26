@@ -6,7 +6,7 @@
 /**
  * add_nodeint_end - adding an element to a linked list end
  * @head: a pointer to a pointer that point to head of l-lists
- * @str: a  pointer to the new character to be included
+ * @n: a  pointer to the new character to be included
  *
  * Return: return the address or a pointer to new element
  */
