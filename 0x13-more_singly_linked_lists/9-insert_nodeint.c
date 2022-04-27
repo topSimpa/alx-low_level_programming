@@ -1,7 +1,6 @@
 #include "lists.h"
-#include "1-listint_len.c"
-#include "2-add_nodeint.c"
 #include "3-add_nodeint_end.c"
+#include "2-add_nodeint.c"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
