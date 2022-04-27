@@ -16,8 +16,8 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *h;
 	unsigned int j, k;
-	k = listint_len(head);
 
+	k = listint_len(head);
 	if (head && index <= k)
 	{
 		j = index;
