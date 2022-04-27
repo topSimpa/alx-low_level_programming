@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "1-listint_len.c"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -14,9 +15,10 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	listint_t *h;
-	unsigned int j;
+	unsigned int j, k;
+	k = listint_len(head);
 
-	if (head && (head != NULL))
+	if (head && index <= k)
 	{
 		j = index;
 		h = head;
