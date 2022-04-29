@@ -13,7 +13,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int c, j, h;
+	long int c, j, h;
 	unsigned long int e = n;
 
 	c = find_count(n);
