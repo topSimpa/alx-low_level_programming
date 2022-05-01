@@ -15,12 +15,12 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int j, h;
 	unsigned long int e = n;
-	long int c;
+	int c;
 
-	c = find_count(n);
-	for (; c >= 0; c--)
+	c = find_count(n, 1) + 1;
+	for (; c > 0; c--)
 	{
-		j = c;
+		j = c - 1;
 		h = 1;
 		for (; j > 0; j--)
 		{
@@ -28,12 +28,12 @@ void print_binary(unsigned long int n)
 		}
 		if (h > e)
 		{
-			_putchar('0');
+			putchar('0');
 		}
 		else
 		{
 			e = e - h;
-			_putchar('1');
+			putchar('1');
 		}
 	}
 }
@@ -45,20 +45,15 @@ void print_binary(unsigned long int n)
  * Return: returns the power place
  */
 
-int find_count(unsigned long int n)
+int find_count(unsigned long int n, unsigned long int j)
 {
-	unsigned long int count = 0;
-	unsigned long int j = 1;
 
-	while (1)
+	if (j * 2 > n)
 	{
-		if (j * 2 > n)
-		{
-			return (count);
-		}
-		j = j * 2;
-		count++;
-	}
-}
 
+		return (0);
+	}
+	j = j * 2;
+	return (1 + find_count(n, j));
+}
 

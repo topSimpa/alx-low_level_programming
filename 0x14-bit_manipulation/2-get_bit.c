@@ -13,10 +13,8 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int power;
 
-	power = 1 << index;
-	if (power <= n)
+	if (index <= 32)
 	{
 		if (n == 0)
 		{
