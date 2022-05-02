@@ -16,10 +16,17 @@ unsigned int high_bits(unsigned long int r);
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-    unsigned long int r = n ^ m;
-    return (high_bits(r));
+	unsigned long int r = n ^ m;
+
+	return (high_bits(r));
 }
 
+/**
+ * high_bits - 1 bits counter
+ * @r: the integer to count its high bit
+ *
+ * Return: the count of high bits
+ */
 
 unsigned int high_bits(unsigned long int r)
 {
