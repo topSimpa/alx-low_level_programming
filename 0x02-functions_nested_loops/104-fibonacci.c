@@ -8,8 +8,9 @@
 
 int main(void)
 {
+long unsigned int b = 0, r = 0;
 long unsigned int f = 1;
-long unsigned int s = 1;
+long unsigned int s = 1, n;
 int i = 0;
 
 while (i < 98)
@@ -19,10 +20,12 @@ while (i < 98)
 		putchar('1');
 	}
 	else
-	{
-		long unsigned int n = s + f;
 
-		printf("%lu", n);
+	{
+		b = (s + f) / 1000;
+		r = (s + f) % 1000;
+		printf("%lu%lu", b, r);
+
 		f = s;
 		s = n;
 	}
