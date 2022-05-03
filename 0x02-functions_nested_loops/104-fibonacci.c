@@ -8,8 +8,8 @@
 
 int main(void)
 {
-long int f = 1;
-long int s = 1;
+long unsigned int f = 1;
+long unsigned int s = 1;
 int i = 0;
 
 while (i < 98)
@@ -20,9 +20,9 @@ while (i < 98)
 	}
 	else
 	{
-		long int n = s + f;
+		long unsigned int n = s + f;
 
-		printf("%ld", n);
+		printf("%lu", n);
 		f = s;
 		s = n;
 	}
