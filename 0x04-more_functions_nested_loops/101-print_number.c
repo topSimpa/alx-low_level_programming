@@ -11,7 +11,7 @@
 void write_max(int m)
 {
 	_putchar(m / 1000000000 + '0');
-	_putchar((m/ 100000000) % 10 + '0');
+	_putchar((m / 100000000) % 10 + '0');
 	_putchar((m / 10000000) % 10 + '0');
 	_putchar((m / 1000000) % 10 + '0');
 	_putchar((m / 100000) % 10 + '0');
@@ -81,10 +81,16 @@ void write_num(int i)
 
 void print_number(int n)
 {
-if (n < 0)
+if (n < 0 &&  n > -2147483648)
 {
 	_putchar('-');
 	n = n * -1;
+}
+else if (n == -2147483648)
+{
+	_putchar('-');
+	_putchar((n * -1) / 1000000000 + '0');
+	n = -1 * (n % 1000000000);
 }
 write_num(n);
 }
