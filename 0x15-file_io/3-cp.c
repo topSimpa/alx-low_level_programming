@@ -4,6 +4,22 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include  "main.h"
+
+/**
+ *close_error - closes all open files
+ *@fd: file descriptor
+ *
+ *Return: void
+ */
+
+void close_error(int fd)
+{
+
+	dprintf(2, "Error: can't close fd %d", fd);
+	exit(100);
+}
+
 
 /**
  * main - copy's the content of one file to another
@@ -25,22 +41,20 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	op1 = open(av[1], O_RDONLY);
+
 	while (1)
 	{
 		rd = read(op1, reads, 1024);
 		if (op1 == -1 || rd == -1)
 		{
-			dprintf(2, "Error: Can't read from %s\n", av[1]);
+			dprintf(2, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 		if (rd == 0)
 			break;
-
 		reads[rd] = '\0';
-
 		if (count == 0)
 			op2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
-
 		wr = write(op2, reads, rd);
 		if (op2 == -1 || wr == -1)
 		{
@@ -49,11 +63,12 @@ int main(int ac, char **av)
 		}
 		count++;
 	}
+
 	cl1 = close(op1);
 	if (cl1 == -1)
-		dprintf(2, "Error: Can't close fd %d", cl1);
+		close_error(op1);
 	cl2 = close(op2);
 	if (cl2 == -1)
-		dprintf(2, "Error: Can't close fd %d", cl2);
+		close_error(op2);
 	return (0);
 }
