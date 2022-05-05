@@ -4,6 +4,7 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * read_textfile - read from a text file
