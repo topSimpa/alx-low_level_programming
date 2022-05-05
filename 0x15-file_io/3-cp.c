@@ -16,7 +16,7 @@
 void close_error(int fd)
 {
 
-	dprintf(2, "Error: can't close fd %d", fd);
+	dprintf(2, "Error: can't close fd %d\n", fd);
 	exit(100);
 }
 
