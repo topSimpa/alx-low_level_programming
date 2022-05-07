@@ -12,10 +12,16 @@
 int arg_tlen(int ac, char **av)
 {
 	int t_len = 0;
+	char *arg;
 
 	for (; ac > 0; ac--)
 	{
-		t_len += sizeof(av[ac - 1]);
+		arg = av[ac - 1];
+		for(; *arg != '\0'; arg++)
+		{
+			t_len++;
+		}
+		t_len++;
 	}
 	return (t_len);
 }
@@ -59,7 +65,6 @@ char *argstostr(int ac, char **av)
 		argstr[new_index] = '\n';
 		new_index++;
 	}
-
 	return (argstr);
 }
 
