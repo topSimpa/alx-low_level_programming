@@ -82,7 +82,7 @@ char **strtow(char *str)
 			}
 
 			len = 0;
-			while (str[len] != ' ')
+			while (str[len] != ' ' && str[len] != '\0')
 			{
 				strtwo[out_index][len] = str[len], len++;
 			}
