@@ -75,7 +75,9 @@ char **strtow(char *str)
 			strtwo[ind] = malloc(sizeof(char) * (in_len(str) + 1));
 			if (strtwo[ind] == NULL)
 			{
-				free(strtwo[ind]), free(strtwo);
+				for (; ind >= 0; ind--)
+					free(strtwo[ind]);
+				free(strtwo);
 				return (NULL);
 			}
 
