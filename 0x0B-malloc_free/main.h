@@ -5,3 +5,6 @@ char *str_concat(char *s1, char *s2);
 int **alloc_grid(int width, int height);
 int arg_tlen(int ac, char **av);
 char *argstostr(int ac, char **av);
+int count_words(char *str);
+int in_len(char *str);
+char **strtow(char *str);

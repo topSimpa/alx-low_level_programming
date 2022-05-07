@@ -30,30 +30,16 @@ int count_words(char *str)
  * Return: the array length of the words
  */
 
-int *in_len(char *str)
+int in_len(char *str)
 {
-	int len, *lens, indx = 0;
+	int len;
 
-	lens = malloc((sizeof(int) * (count_words(str))) + 1);
-	if (lens == NULL)
+	len = 0;
+	while (str[len] != ' ')
 	{
-		free(lens);
-		return (NULL);
+		len++;
 	}
-	for (; *str != '\0'; str++)
-	{
-		if (*str != ' ' && (*(str - 1) == ' ' || indx == 0))
-		{
-			len = 0;
-			while (str[len] != ' ')
-			{
-				len++;
-			}
-			lens[indx++] = len;
-		}
-	}
-	lens[indx] = '\0';
-	return (lens);
+	return (len);
 
 }
 
@@ -68,48 +54,40 @@ int *in_len(char *str)
 char **strtow(char *str)
 {
 	char **strtwo;
-	int size, out_index = 0, ind = 0, len, *lens;
+	int out_index = 0, ind = 0, len;
 
 	if (str == NULL || str[0] == '\0')
 	{
 		return (NULL);
 	}
 	strtwo = malloc((sizeof(char *)) * (count_words(str) + 1));
-	if (strtwo == NULL)
+	if (strtwo == NULL || count_words(str) == 0)
 	{
 		free(strtwo);
 		return (NULL);
 	}
 
-	size = count_words(str), lens = in_len(str);
-	for (; ind < size; ind++)
-	{
-		strtwo[ind] = malloc(sizeof(char) * (lens[ind] + 1));
-		if (strtwo[ind] == NULL)
-		{
-			free(strtwo[ind]);
-			return (NULL);
-		}
-	}
-	free(lens);
 	for (; *str != '\0'; str++)
 	{
 		if (*str != ' ' && (*(str - 1) == ' ' || out_index == 0))
 		{
+
+			strtwo[ind] = malloc(sizeof(char) * (in_len(str) + 1));
+			if (strtwo[ind] == NULL)
+			{
+				free(strtwo[ind]), free(strtwo);
+				return (NULL);
+			}
+
 			len = 0;
 			while (str[len] != ' ')
 			{
 				strtwo[out_index][len] = str[len], len++;
 			}
 			strtwo[out_index][len] = '\0';
-			out_index++;
+			out_index++, ind++;
 		}
 	}
 	strtwo[out_index] = NULL;
 	return (strtwo);
 }
-
-
-
-
-
