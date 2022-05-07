@@ -23,7 +23,7 @@ int arg_tlen(int ac, char **av)
 		}
 		t_len++;
 	}
-	return (t_len);
+	return (t_len + 1);
 }
 
 
