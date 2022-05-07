@@ -17,7 +17,7 @@ int arg_tlen(int ac, char **av)
 	for (; ac > 0; ac--)
 	{
 		arg = av[ac - 1];
-		for(; *arg != '\0'; arg++)
+		for (; *arg != '\0'; arg++)
 		{
 			t_len++;
 		}
