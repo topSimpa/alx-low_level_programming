@@ -46,11 +46,13 @@ int main(int ac, char **av)
 		rd = read(op1, reads, 1024);
 		if (op1 == -1 || rd == -1)
 		{
+			if (rd == -1 && op1 != -1)
+				close(op1);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 		if (rd == 0 && count > 0)
-			break;
+			return (0);
 		reads[rd] = '\0';
 		if (count == 0)
 			op2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
