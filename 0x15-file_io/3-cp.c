@@ -52,7 +52,7 @@ int main(int ac, char **av)
 			exit(98);
 		}
 		if (rd == 0 && count > 0)
-			return (0);
+			break;
 		reads[rd] = '\0';
 		if (count == 0)
 			op2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
