@@ -29,7 +29,6 @@ int create_file(const char *filename, char *text_content)
 			return (1);
 			close(op);
 		}
-		printf("op fail");
 		return (op);
 	}
 	return (-1);
