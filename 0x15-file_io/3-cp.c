@@ -37,17 +37,18 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
-		exit(97);
+		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
 	}
+
 	op1 = open(av[1], O_RDONLY);
+	if (op1 == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	while (1)
 	{
 		rd = read(op1, reads, 1024);
-		if (op1 == -1 || rd == -1)
+		if (rd == -1)
 		{
-			if (rd == -1 && op1 != -1)
-				close(op1);
+			close(op1);
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
@@ -59,12 +60,10 @@ int main(int ac, char **av)
 		wr = write(op2, reads, rd);
 		if (op2 == -1 || wr == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", av[2]);
-			exit(99);
+			dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
 		count++;
 	}
-
 	cl1 = close(op1);
 	if (cl1 == -1)
 		close_error(op1);
