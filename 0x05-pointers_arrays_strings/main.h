@@ -9,4 +9,8 @@ void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
+int sign(char *s);
+int pow_10(int n);
+int digit_count(char *s);
+int _atoi(char *s);
 
