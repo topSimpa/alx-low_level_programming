@@ -15,16 +15,14 @@ int digit_count(char *s)
 	{
 		if (*s >= 48 && *s <= 57)
 		{
-			/*printf("%c", *s);*/
 			digit_no++;
-			if ( !(*(s + 1) >= 48 && *(s + 1) <= 57))
+			if (!(*(s + 1) >= 48 && *(s + 1) <= 57))
 			{
 				break;
 			}
 		}
 		s++;
 	}
-	/*printf("dice")*/;
 	return (digit_no);
 }
 
@@ -56,13 +54,12 @@ int sign(char *s)
 
 	while (*s != '\0' && !(*s >= 48 && *s <= 57))
 	{
-		if(*s == '-')
+		if (*s == '-')
 		{
 			count++;
 		}
 		s++;
 	}
-	/*printf("call");*/
 
 	if (count % 2 == 0)
 		return (1);
@@ -90,14 +87,17 @@ int _atoi(char *s)
 		{
 			if (*s >= 48 && *s <= 57)
 			{
-				num += ((*s) - '0') * (pow_10(--digit_c));
+				if (num < 2147483640)
+					num += ((*s) - '0') * (pow_10(--digit_c));
 				if (!(*(s + 1) >= 48 && *(s + 1) <= 57))
 					break;
 			}
 			s++;
 		}
-		num = num * si;
+		if (num >= 2147483640)
+			num = ((num * si) + ((*s) - '0') * si);
+		else
+			num = num * si;
 	}
-	/*printf("ace");*/
 	return (num);
 }
