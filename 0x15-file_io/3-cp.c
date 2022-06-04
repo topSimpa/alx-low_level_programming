@@ -16,7 +16,7 @@
 void close_error(int fd)
 {
 
-	dprintf(2, "Error: Can't close fd %d\n", fd);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	exit(100);
 }
 
@@ -37,7 +37,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	}
 
 	op1 = open(av[1], O_RDONLY);
@@ -61,7 +61,7 @@ int main(int ac, char **av)
 		wr = write(op2, reads, rd);
 		if (op2 == -1 || wr == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", av[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 		}
 		count++;
 	}
