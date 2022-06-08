@@ -3,10 +3,10 @@
 #include "main.h"
 
 /**
- * malloc_checked
+ * malloc_checked - create a well checked malloc
  *
  * @b: size of the memory to allocat
- * Return; void()
+ * Return: void()
  */
 
 void *malloc_checked(unsigned int b)
