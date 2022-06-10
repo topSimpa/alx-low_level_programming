@@ -3,7 +3,13 @@
 #include <stdlib.h>
 #include "main.h"
 
-
+/**
+ * _calloc - allocate memory for an array of each byte set to 0
+ * @nmemb - the number of members
+ * @size - the size of each members
+ *
+ * Return: void pointer to memory
+ */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
