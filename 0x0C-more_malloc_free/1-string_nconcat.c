@@ -50,7 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (copy == NULL)
 	{
 		free(copy);
-		return NULL;
+		return (NULL);
 	}
 
 	for (; ind < len_sn; ind++)
