@@ -7,6 +7,7 @@
  *insert_dnodeint_at_index - insert a node at an index of dlist
  *@h: the first node
  *@idx: the index
+ *@n: the new number to put
  *
  *Return: node address
  */
