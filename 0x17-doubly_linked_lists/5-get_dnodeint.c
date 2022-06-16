@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
+#include "1-dlistint_len.c"
 
 /**
  *get_dnodeint_at_index - frees a dlist
