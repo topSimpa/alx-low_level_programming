@@ -3,11 +3,10 @@
 #include "lists.h"
 
 /**
- *get_dnodeint_at_index - frees a dlist
+ *sum_dlistint - adding dlistint
  *@head: the first node
- *@index: the index
  *
- *Return: node
+ *Return:  sum of int
  */
 
 int sum_dlistint(dlistint_t *head)
@@ -17,12 +16,12 @@ int sum_dlistint(dlistint_t *head)
 
 	if (head)
 	{
-		sum += head->n;
 		h = head;
-		do {
-			h = h->next;
+		while (h)
+		{
 			sum += h->n;
-		} while (h->next);
+			h = h->next;
+		}
 	}
 	return (sum);
 }
