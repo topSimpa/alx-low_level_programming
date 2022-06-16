@@ -4,10 +4,10 @@
 #include "1-dlistint_len.c"
 
 /**
+ *free_dlistint - frees a dlist
+ *@head: the first node
  *
- *
- *
- *
+ *Return: void
  */
 
 void free_dlistint(dlistint_t *head)
@@ -15,14 +15,14 @@ void free_dlistint(dlistint_t *head)
 	dlistint_t *h;
 	size_t len, count, times;
 
-	if(head)
+	if (head)
 	{
 		count = 0, len = dlistint_len(head) - 1;
-		while(count < len)
+		while (count < len)
 		{
 			h = head;
 			times = len - count;
-			do{
+			do {
 				h = h->next;
 			} while ((--times) > 0);
 			free(h);
