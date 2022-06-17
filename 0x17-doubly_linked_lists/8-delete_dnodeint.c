@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
-/*#include "1-dlistint_len.c"*/
+#include "1-dlistint_len.c"
 
 /**
  * delete_dnodeint_at_index - delete desired node
