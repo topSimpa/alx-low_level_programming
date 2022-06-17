@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "1-dlistint_len.c"
+/*#include "1-dlistint_len.c"*/
 
 /**
  * delete_dnodeint_at_index - delete desired node
@@ -13,7 +13,7 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *temp, *h;
+	dlistint_t *h;
 	unsigned int loop = 0;
 
 	if (*head && index < dlistint_len(*head))
@@ -26,9 +26,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 		if (index == 0)
 		{
-			temp = (*head)->next;
-			temp->prev = NULL;
-			*head = temp;
+			*head = (*head)->next;
+			(*head)->prev = NULL;
 			return (1);
 		}
 
@@ -44,9 +43,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 		else
 		{
-			temp = h->next;
-			temp->prev = h->prev;
-			h->prev->next = temp;
+			h->next->prev = h->prev;
+			h->prev->next = h->next;
 			return (1);
 		}
 	}
