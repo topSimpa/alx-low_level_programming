@@ -13,7 +13,7 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *h;
+	dlistint_t *h = *head;
 	unsigned int loop = 0;
 
 	if (*head && index < dlistint_len(*head))
@@ -28,25 +28,25 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		{
 			*head = (*head)->next;
 			(*head)->prev = NULL;
-			return (1);
 		}
-
-		h = *head;
-		for (; loop < index; loop++)
-			h = h->next;
-
-		if (index == dlistint_len(*head) - 1)
-		{
-			h->prev->next = NULL;
-			return (1);
-		}
-
 		else
 		{
-			h->next->prev = h->prev;
-			h->prev->next = h->next;
-			return (1);
+			for (; loop < index; loop++)
+				h = h->next;
+
+			if (index == dlistint_len(*head) - 1)
+			{
+				h->prev->next = NULL;
+			}
+
+			else
+			{
+				h->next->prev = h->prev;
+				h->prev->next = h->next;
+			}
 		}
+		free(h);
+		return (1);
 	}
 	return (-1);
 }
