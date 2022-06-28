@@ -15,16 +15,21 @@ int i = 0;
 
 while (i < 98)
 {
+	n = f + s;
 	if (i == 0)
 	{
 		putchar('1');
 	}
 	else
-
 	{
-		b = (s + f) / 1000;
-		r = (s + f) % 1000;
-		printf("%lu%lu", b, r);
+		if (n > 1000)
+		{
+			b = (s + f) / 1000;
+			r = (s + f) % 1000;
+			printf("%lu%lu", b, r);
+		}
+		else
+			printf("%lu", n);
 
 		f = s;
 		s = n;
