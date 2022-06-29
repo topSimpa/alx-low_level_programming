@@ -17,10 +17,9 @@ while (i < 98)
 		putchar('1');
 	else if (i < 92)
 	{
-		if (n > 1000)
-			b = (s + f) / 1000, r = (s + f) % 1000, printf("%lu%lu", b, r);
-		else
-			printf("%lu", n);
+		if (i == 91)
+			b = (s + f) / 1000, r = (s + f) % 1000;
+		printf("%lu", n);
 		f = s, s = n;
 	}
 	else if (i == 92)
