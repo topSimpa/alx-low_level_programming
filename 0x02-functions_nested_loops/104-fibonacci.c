@@ -8,41 +8,40 @@
 
 int main(void)
 {
-long unsigned int b = 0, r = 0;
-long unsigned int f = 1;
-long unsigned int s = 1, n;
-int i = 0;
+unsigned long int b = 0, r = 0, c, d, s = 1, n, f = 1, i = 0;
 
 while (i < 98)
 {
 	n = f + s;
 	if (i == 0)
-	{
 		putchar('1');
+	else if (i < 92)
+	{
+		if (n > 1000)
+			b = (s + f) / 1000, r = (s + f) % 1000, printf("%lu%lu", b, r);
+		else
+			printf("%lu", n);
+		f = s, s = n;
+	}
+	else if (i == 92)
+	{
+		c = b, d = r;
+		b += (f / 1000) + (r + (f % 1000)) / 1000, r = (r + (f % 1000)) % 1000;
+		printf("%lu%lu", b, r);
 	}
 	else
 	{
-		if (n > 1000)
-		{
-			b = (s + f) / 1000;
-			r = (s + f) % 1000;
-			printf("%lu%lu", b, r);
-		}
-		else
-			printf("%lu", n);
-
-		f = s;
-		s = n;
+		f = b, s = r;
+		b += c + (r + d) / 1000, printf("%lu", b);
+		if (r + d >= 1000)
+		putchar('0');
+		r = (r + d) % 1000, printf("%lu", r);
+		c = f, d = s;
 	}
 	if (i != 97)
-	{
-		putchar(',');
-		putchar(' ');
-	}
+		putchar(','), putchar(' ');
 	i++;
 }
 putchar('\n');
 return (0);
 }
-
-
