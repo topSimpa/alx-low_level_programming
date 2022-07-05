@@ -8,7 +8,7 @@
 
 int main(void)
 {
-unsigned long int b = 0, r = 0, c, d, s = 1, n, f = 1, i = 0;
+unsigned long int b, r, c, d, s = 1, n, f = 1, i = 0;
 
 while (i < 98)
 {
