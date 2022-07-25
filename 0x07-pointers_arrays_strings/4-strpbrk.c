@@ -29,5 +29,7 @@ char *_strpbrk(char *s, char *accept)
 		if (match == 1)
 			break;
 	}
-	return (s);
+	if (s)
+		return(s);
+	return(s);
 }
