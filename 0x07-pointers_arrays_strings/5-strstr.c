@@ -44,7 +44,7 @@ char *_strbrek(char *s, char *accept)
 {
 	unsigned int a_ind;
 
-	if (s && accept)
+	if (*s && *accept)
 	{
 		for (a_ind = 0; s[a_ind] != '\0'; a_ind++)
 		{
@@ -68,7 +68,7 @@ char *_strstr(char *haystack, char *needle)
 	unsigned int n = 0;
 
 	start = haystack;
-	while (*start != '\0')
+	while (*start != '\0' && *needle != '\0')
 	{
 		start = _strbrek(start, needle);
 		if (start)
