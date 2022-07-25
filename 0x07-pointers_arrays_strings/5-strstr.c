@@ -12,7 +12,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int match, a_ind;
+	unsigned int a_ind, match;
 
 	match = 0;
 	for (; *s != '\0'; s++)
@@ -42,22 +42,15 @@ unsigned int _strspn(char *s, char *accept)
 
 char *_strbrek(char *s, char *accept)
 {
-	unsigned int match, a_ind;
+	unsigned int a_ind;
 
-	match = 0;
 	if (s && accept)
 	{
 		for (a_ind = 0; s[a_ind] != '\0'; a_ind++)
 		{
 			if (*accept == s[a_ind])
-			{
-				(match++);
-				break;
-			}
+				return (s + a_ind);
 		}
-
-		if (*s != '\0')
-			return (s + a_ind);
 	}
 	return (NULL);
 }
@@ -78,7 +71,7 @@ char *_strstr(char *haystack, char *needle)
 	while (*start != '\0')
 	{
 		start = _strbrek(start, needle);
-		if (*start)
+		if (start)
 		{
 			n = _strspn(start, needle);
 			if (n == _strlen(needle))
@@ -86,7 +79,9 @@ char *_strstr(char *haystack, char *needle)
 			start = start + n;
 		}
 		else
+		{
 			break;
+		}
 	}
 	return (start);
 }
