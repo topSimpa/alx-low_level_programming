@@ -15,21 +15,23 @@ char *_strpbrk(char *s, char *accept)
 	unsigned int match, a_ind;
 
 	match = 0;
-	for (; *s != '\0'; s++)
+	if (s && accept)
 	{
-
-		for (a_ind = 0; accept[a_ind] != '\0'; a_ind++)
+		for (; *s != '\0'; s++)
 		{
-			if (*s == accept[a_ind])
+			for (a_ind = 0; accept[a_ind] != '\0'; a_ind++)
 			{
-				(match++);
-				break;
+				if (*s == accept[a_ind])
+				{
+					(match++);
+					break;
+				}
 			}
+			if (match == 1)
+				break;
 		}
-		if (match == 1)
-			break;
+		if (*s != '\0')
+			return (s);
 	}
-	if (s)
-		return(s);
-	return(s);
+	return (NULL);
 }
