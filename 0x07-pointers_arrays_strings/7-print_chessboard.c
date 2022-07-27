@@ -16,19 +16,15 @@ void print_chessboard(char (*a)[8])
 
 	while (n < 8)
 	{
-		if (n > 1 && n < 6)
-			putchar('\n');
-		else
+		i = 0;
+		while (i < 8)
 		{
-			i = 0;
-			while (i < 8)
-			{
-				putchar(a[n][i]);
-				if (i == 7)
-					putchar('\n');
-				i++;
-			}
+			putchar(a[n][i]);
+			if (i == 7)
+				putchar('\n');
+			i++;
 		}
+
 		n++;
 	}
 }
