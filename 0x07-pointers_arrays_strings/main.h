@@ -8,3 +8,4 @@ void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 char *_strbrek(char *s, char *accept);
 unsigned int _strlen(char *s);
+int _putchar(char c);
