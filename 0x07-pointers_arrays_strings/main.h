@@ -9,3 +9,4 @@ void print_diagsums(int *a, int size);
 char *_strbrek(char *s, char *accept);
 unsigned int _strlen(char *s);
 int _putchar(char c);
+void set_string(char **s, char *to);
