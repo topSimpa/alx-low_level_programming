@@ -1,0 +1,5 @@
+all: build_school
+
+build_school:
+	gcc main.c school.c -o school
+
