@@ -1,0 +1,7 @@
+CC := gcc
+SRC := $(wildcard *.c) 
+ 
+all: build_school
+
+build_school:
+	${CC} ${SRC} -o school
