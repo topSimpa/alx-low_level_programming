@@ -40,12 +40,12 @@ int binary_search(int *array, size_t size, int value)
 			mid = (size - 1) / 2, cen = array[mid];
 			if (value > cen)
 			{
-				min = min + mid + 1, max = max;
+				min = max - mid;
 				array = &(array[mid + 1]), size = size - (mid + 1);
 			}
 			else if (value < cen)
 			{
-				max = min + mid - 1, min = min;
+				max = min + mid - 1;
 				size = mid;
 			}
 			else
