@@ -44,10 +44,7 @@ int binary_search(int *array, size_t size, int value)
 				array = &(array[mid + 1]), size = size - (mid + 1);
 			}
 			else if (value < cen)
-			{
-				max = min + mid - 1;
-				size = mid;
-			}
+				max = min + mid - 1, size = mid;
 			else
 				return (min + mid);
 		}
