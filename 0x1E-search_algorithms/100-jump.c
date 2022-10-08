@@ -52,12 +52,12 @@ int jump_search(int *array, size_t size, int value)
 		{
 			if (cur == 0 && array[0] == value)
 				return (lin_s(array, 0, 0, size, value));
-			else if (array[jby * cur] >= value || jby * cur > size - 1)
+			else if (array[jby * cur] >= value || jby * cur >= size)
 			{
 
 				printf("Value found between indexes [%ld] and [%ld]\n",
 					 jby * (cur - 1), jby * cur);
-				if (jby * cur > size)
+				if (jby * cur >= size)
 					len = size - (jby * (cur - 1));
 				else
 					len = jby;
