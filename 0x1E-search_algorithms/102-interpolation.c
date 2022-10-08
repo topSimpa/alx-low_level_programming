@@ -35,12 +35,12 @@ int interpolation_search(int *array, size_t size, int value)
 			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
 			if (array[pos] > value)
 			{
-				max = pos;
+				max = pos - 1;
 				continue;
 			}
 			else if (array[pos] < value)
 			{
-				min = pos;
+				min = pos + 1;
 				continue;
 			}
 			else if (array[pos] == value)
