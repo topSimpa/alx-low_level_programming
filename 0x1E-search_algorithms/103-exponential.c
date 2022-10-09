@@ -85,7 +85,7 @@ int exponential_search(int *array, size_t size, int value)
 			}
 			printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
 			if (array[pos] < value)
-				min = pos + 1;
+				min = pos;
 			else if (array[pos] == value)
 				return (pos);
 			else if (pos == size - 1)
