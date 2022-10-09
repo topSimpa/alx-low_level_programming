@@ -88,6 +88,8 @@ int exponential_search(int *array, size_t size, int value)
 				min = pos + 1;
 			else if (array[pos] == value)
 				return (pos);
+			else if (pos == size - 1)
+				return (-1);
 			pos = pos * 2;
 		}
 	}
