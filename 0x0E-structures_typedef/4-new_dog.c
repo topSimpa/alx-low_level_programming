@@ -26,7 +26,7 @@ int _strlen(char *str)
  * Return: void
  */
 
-void _strcpy(char *from, char *to)
+char *_strcpy(char *from, char *to)
 {
 	int i = 0;
 
@@ -36,6 +36,7 @@ void _strcpy(char *from, char *to)
 		i++;
 	}
 	to[i] = '\0';
+	return (to);
 }
 
 
