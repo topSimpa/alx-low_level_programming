@@ -18,7 +18,7 @@ int main(int ac, char **av)
 
 	if (ac != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(1);
 	}
 
@@ -26,7 +26,7 @@ int main(int ac, char **av)
 
 	if (bytes < 0)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(2);
 	}
 
