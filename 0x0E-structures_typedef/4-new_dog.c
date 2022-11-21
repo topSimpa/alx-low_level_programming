@@ -71,7 +71,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	_strcpy(owner, r.owner);
 
 	d = malloc(sizeof(dog_t));
-        if (d == NULL)
+	if (d == NULL)
 	{
 		free(d);
 		return (NULL);
