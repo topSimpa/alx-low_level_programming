@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "main.h"
+#include "monty.h"
 
 /**
 * _isdigit - To check if digit
@@ -8,16 +7,16 @@
 */
 
 
-int _isdigit(int c)
+int _isdigit(char c)
 {
 
-if (c > 47 && c < 58)
-{
-return (1);
-}
-else
-{
-return (0);
+	if (c > 47 && c < 58)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
 
-}
+	}
 }
