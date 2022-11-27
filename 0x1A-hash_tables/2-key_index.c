@@ -4,7 +4,7 @@
  * key_index - generate the index of a key
  *
  * @key: the key to use to generate an index
- * @size of the array to store the key and value
+ * @size: of the array to store the key and value
  *
  * Return: the index generate by function
  */
