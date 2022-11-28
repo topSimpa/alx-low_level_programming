@@ -105,6 +105,7 @@ int if_exist(hash_node_t *head, const unsigned char *key)
  * change_node - adding an element to a linked list end
  * @head: a pointer to a head
  * @index: the index to get
+ * @value: the value to be change to
  *
  * Return: return the address to the node or null
  */
