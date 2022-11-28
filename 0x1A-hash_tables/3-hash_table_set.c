@@ -36,7 +36,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(new->key, key);
 	strcpy(new->value, value);
 	index = key_index((const unsigned char *)key, ht->size);
-	stack_col(ht->array[index], new);
+	stack_col(&ht->array[index], new);
 	return (1);
 }
 
@@ -49,12 +49,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * Return: void
  */
 
-void stack_col(hash_node_t *head, hash_node_t *new)
+void stack_col(hash_node_t **head, hash_node_t *new)
 {
 
-	if (head != NULL)
-		new->next = head;
+	if (*head != NULL)
+		new->next = *head;
 	else
 		new->next = NULL;
-	head = new;
+	*head = new;
 }
