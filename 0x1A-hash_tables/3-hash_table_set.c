@@ -36,7 +36,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(new->key, key);
 	strcpy(new->value, value);
 	index = key_index((const unsigned char *)key, ht->size);
-	stack_col(&ht->array[index], new);
+	stack_col(&(ht->array[index]), new);
 	return (1);
 }
 
