@@ -43,5 +43,6 @@ int streq(char *str1, char *str2);
 int change_node(hash_node_t *head, int index, const char *value);
 int if_exist(hash_node_t *head, const unsigned char *key);
 char *hash_table_get(const hash_table_t *ht, const char *key);
+void hash_table_print(const hash_table_t *ht);
 
 #endif /* hash_table_h_ */
