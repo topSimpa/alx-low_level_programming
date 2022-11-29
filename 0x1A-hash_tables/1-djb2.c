@@ -19,3 +19,21 @@ unsigned long int hash_djb2(const unsigned char *str)
 	}
 	return (hash);
 }
+
+/**
+ * tot_ascii - calculate the total ascii value of a string
+ * @str: the string to evaluate
+ *
+ * Return: ascii value
+ */
+
+unsigned long int tot_ascii(char *str)
+{
+	unsigned long int tot = 0;
+
+	while (*str)
+	{
+		tot += *str++;
+	}
+	return (tot);
+}
