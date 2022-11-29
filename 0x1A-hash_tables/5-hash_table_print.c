@@ -24,7 +24,8 @@ void hash_table_print(const hash_table_t *ht)
 
 		if (h)
 		{
-			found = 1;
+			if (found == 1)
+				printf(", ");
 			while (h != NULL)
 			{
 				printf("'%s': '%s'", h->key, h->value);
@@ -32,10 +33,9 @@ void hash_table_print(const hash_table_t *ht)
 				if (h)
 					printf(", ");
 			}
+			found  = 1;
 		}
 		ind++;
-		if (found == 1 && ht->array[ind])
-			printf(", ");
 	}
 	printf("}\n");
 }

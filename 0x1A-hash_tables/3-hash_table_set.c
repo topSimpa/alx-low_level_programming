@@ -22,25 +22,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	in_ind = if_exist(ht->array[index], (const unsigned char *)key);
 	if (in_ind != -1)
 		return (change_node(ht->array[index], in_ind, value));
-	new = malloc(sizeof(hash_node_t *));
+	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
 	{
 		free(new);
 		return (0);
 	}
-	new->key = malloc(sizeof(key));
-	if (new->key == NULL)
-	{
-		free(new->key), free(new);
-		return (0);
-	}
-	new->value = malloc(sizeof(value));
-	if (new->value == NULL)
-	{
-		free(new->key), free(new->value), free(new);
-		return (0);
-	}
-	strcpy(new->key, key), strcpy(new->value, value);
+	new->key = strdup(key);
+	new->value = strdup(value);
 	if (ht->array[index] != NULL)
 		new->next = ht->array[index];
 	else
@@ -121,7 +110,7 @@ int change_node(hash_node_t *head, int index, const char *value)
 		h = h->next, j--;
 	}
 	free(h->value);
-	h->value = malloc(sizeof(value));
+	h->value = malloc(strlen(value) + 1);
 	strcpy(h->value, value);
 	return (1);
 }
