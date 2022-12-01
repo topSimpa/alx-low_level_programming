@@ -94,5 +94,5 @@ void shash_table_delete(shash_table_t *ht);
 int streq2(char *str1, char *str2);
 int change_node2(shash_node_t *head, int index, const char *value);
 int if_exist2(shash_node_t *head, const unsigned char *key);
-unsigned long int tot_ascii(char *str);
+void set_sortedlist(shash_table_t *ht, shash_node_t *h);
 #endif /* hash_table_h_ */
